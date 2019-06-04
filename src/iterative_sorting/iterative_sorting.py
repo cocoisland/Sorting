@@ -3,11 +3,11 @@ def selection_sort( arr ):
     for i in range(0, len(arr)-1):
         cur_index = i
         smallest_index = cur_index
-        # j=cur_index 
+  
         for j in range(cur_index,len(arr)):
             if arr[j] < arr[smallest_index]:
                 smallest_index=j
-        # if j>0 :  
+
         tempj=arr[smallest_index]
         arr[smallest_index]=arr[cur_index]
         arr[cur_index]=tempj
@@ -18,6 +18,16 @@ def selection_sort( arr ):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    swapped = True
+
+    while swapped:
+        swapped=False
+        for i in range(0,len(arr)-1):
+            if arr[i] > arr[i+1] :
+                temp=arr[i]
+                arr[i]=arr[i+1]
+                arr[i+1]=temp
+                swapped=True
 
     return arr
 
