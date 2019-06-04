@@ -1,21 +1,17 @@
 # TO-DO: Complete the selection_sort() function below 
 def selection_sort( arr ):
-    for i in range(0, len(arr) ):
+    for i in range(0, len(arr)-1):
         cur_index = i
         smallest_index = cur_index
-        j=cur_index
-        print(f'before while i={i} j={j} j-1= {arr[j-1]} cur={arr[cur_index]}')
-        while j > 0 and arr[j-1] => arr[smallest_index-1]:
-            print(f'inside j-1={arr[j-1]}, cur={arr[cur_index]}')
-            j=j-1
+        # j=cur_index 
+        for j in range(cur_index,len(arr)):
+            if arr[j] < arr[smallest_index]:
+                smallest_index=j
+        # if j>0 :  
+        tempj=arr[smallest_index]
+        arr[smallest_index]=arr[cur_index]
+        arr[cur_index]=tempj
 
-        if j>0 :
-            print(f'before swap smallest=arr[smallest_index]} j={arr[j]}')
-            tempj=arr[j]
-            arr[j]=arr[smallest_index]
-            while j < cur_index:
-                temp2 = arr[j+1]
-                arr[j+1]=temp
 
     return arr
 
